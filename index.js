@@ -2,12 +2,12 @@ const express = require("express")
 const { connection } = require("./db")
 require("dotenv").config()
 const cors = require("cors")
-let { contactRouter } = require("./routes/contacts.routes")
+let { domainRouter } = require("./routes/domain.routes")
 
 const app = express()
 app.use(express.json())
 app.use(cors())
-app.use("/api", contactRouter)
+app.use("/api", domainRouter)
 
 
 app.listen(process.env.port, async () => {
