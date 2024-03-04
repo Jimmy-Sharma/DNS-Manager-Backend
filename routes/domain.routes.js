@@ -5,7 +5,7 @@ require("dotenv").config()
 const { validate } = require("../middleware/validate")
 
 //route to create or add new domain to the database
-domainRouter.post("/domains", validate, async (req, res) => {
+domainRouter.post("/domain", validate, async (req, res) => {
     let data = req.body
     try {
         let newDomain = await new DomainModel(data)

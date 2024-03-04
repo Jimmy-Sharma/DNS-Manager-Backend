@@ -1,6 +1,6 @@
 const validate = (req, res, next) => {
     if (req.method === "POST") {
-        if (req.body.name && req.body.domainName) {
+        if (req.body.name) {
             next()
         } else {
             res.send(
